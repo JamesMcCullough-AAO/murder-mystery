@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Input, VStack, Box, Text } from "@chakra-ui/react";
-import { prevMessagesProps, sendChatMessage } from "../utils/chatGPT";
+import { sendChatMessage } from "../utils/chatGPT";
+import { prevMessagesProps } from "../types";
 
 const ChatInterface: React.FC = () => {
   const [inputText, setInputText] = useState("");

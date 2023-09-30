@@ -1,11 +1,10 @@
 import OpenAI from "openai";
+import { prevMessagesProps } from "../types";
 
 const openai = new OpenAI({
   apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
 });
-
-export type prevMessagesProps = { role: string; content: string }[];
 
 type sendChatMessageProps = {
   message: string;
