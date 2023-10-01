@@ -10,19 +10,39 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
-import { Character, clue } from "../types";
+import { Character, clue, mysteryDataType } from "../types";
+import { useState } from "react";
 
 interface Props {
   location: string;
-  suspects: Character[];
-  clues: clue[];
+  mysteryData: Partial<mysteryDataType>;
+  setLocation: (location: string) => void;
 }
 
-export const GameMenu: React.FC<Props> = ({ location, suspects, clues }) => {
+export const GameMenu: React.FC<Props> = ({
+  location,
+  setLocation,
+  mysteryData,
+}) => {
+  const [unlockedClues, setUnlockedClues] = useState<clue[]>([]);
+
+  const currentLocationData = mysteryData?.locations?.locationList.find(
+    (locationData) => {
+      return locationData.location === location;
+    }
+  );
+
+  const currentSuspects =
+    mysteryData?.characterDetails?.suspects.filter((suspect) => {
+      return currentLocationData?.charactersPresent.includes(suspect.name);
+    }) || [];
+
+  const neighboringLocations = currentLocationData?.neighboringLocations || [];
+
   return (
     <Flex direction="column" align="start" p={4}>
       {/* Current Location */}
-      <Heading size="md" mb={4}>
+      <Heading size="3xl" mb={4} color="white">
         Location: {location}
       </Heading>
 
@@ -32,14 +52,14 @@ export const GameMenu: React.FC<Props> = ({ location, suspects, clues }) => {
       </Button>
 
       {/* Suspects at Location */}
-      {suspects.map((suspect, index) => (
+      {currentSuspects.map((suspect, index) => (
         <Menu key={index}>
           <MenuButton as={Button} rightIcon={<ExpandCircleDownIcon />} mb={2}>
             {suspect.name}
           </MenuButton>
           <MenuList>
             <MenuItem>Interview</MenuItem>
-            {clues.map((clue) => (
+            {unlockedClues.map((clue) => (
               <MenuItem key={clue.name}>Show Clue: {clue.name}</MenuItem>
             ))}
           </MenuList>
@@ -57,8 +77,26 @@ export const GameMenu: React.FC<Props> = ({ location, suspects, clues }) => {
           Show Clues
         </MenuButton>
         <MenuList>
-          {clues.map((clue) => (
+          {unlockedClues.map((clue) => (
             <MenuItem key={clue.name}>Show Clue: {clue.name}</MenuItem>
+          ))}
+        </MenuList>
+      </Menu>
+
+      <Menu>
+        <MenuButton as={Button} rightIcon={<ExpandCircleDownIcon />} mb={2}>
+          Travel to another location
+        </MenuButton>
+        <MenuList>
+          {neighboringLocations.map((location) => (
+            <MenuItem
+              key={location}
+              onClick={() => {
+                setLocation(location);
+              }}
+            >
+              Travel to {location}
+            </MenuItem>
           ))}
         </MenuList>
       </Menu>

@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import DetectiveSetup from "./pages/detectiveSetup";
 import { Box, HStack, Heading } from "@chakra-ui/react";
-import { mysteryDataType } from "./types";
+import { Location, mysteryDataType } from "./types";
 import { TitleSelect } from "./pages/titleSelect";
 import { generateMystery } from "./utils/generateMystery";
 
@@ -66,8 +66,8 @@ function App() {
       {currentStep === 4 && (
         <GameMenu
           location={currentLocation}
-          suspects={mysteryData.characterDetails?.suspects || []}
-          clues={mysteryData.clues?.clueList || []}
+          mysteryData={mysteryData}
+          setLocation={setCurrentLocation}
         />
       )}
     </Box>
