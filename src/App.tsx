@@ -17,6 +17,7 @@ function App() {
   >({});
   const [currentStep, setCurrentStep] = React.useState(0);
   const [inStoryReader, setInStoryReader] = React.useState(false);
+  const [currentLocation, setCurrentLocation] = React.useState("");
 
   // When the currentStep changes to 2, we want to generate the mystery. Call async generateMystery function, and when complete set the mysteryData to the new mysteryData, and set the currentStep to 3
   React.useEffect(() => {
@@ -27,6 +28,12 @@ function App() {
       });
     }
   }, [currentStep]);
+
+  const startGame = () => {
+    // Set the current location to the scene of the murder.
+    setCurrentLocation(mysteryData?.furtherDetails?.location || "");
+    setCurrentStep(4);
+  };
 
   return (
     <Box bgImage="url('/background-house.jpg')" bgSize="cover" minH="100vh">
@@ -53,12 +60,12 @@ function App() {
         <StoryReader
           introductionText={mysteryData.introduction?.introductionText}
           setInStoryReader={setInStoryReader}
-          onStoryComplete={() => setCurrentStep(4)}
+          onStoryComplete={() => startGame()}
         />
       )}
       {currentStep === 4 && (
         <GameMenu
-          location={mysteryData.locations?.[0]?.location || ""}
+          location={currentLocation}
           suspects={mysteryData.characterDetails?.suspects || []}
           clues={mysteryData.clues?.clueList || []}
         />

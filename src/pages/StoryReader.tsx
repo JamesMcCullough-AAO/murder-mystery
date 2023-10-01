@@ -14,15 +14,13 @@ export const StoryReader = ({
 }: StoryReaderProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   setInStoryReader(true);
-
-  if (!introductionText) {
-    return null;
-  }
-
   const [typedString, setTypedString] = useState<string>("");
   const typeWriterRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
+    if (!introductionText) {
+      return;
+    }
     const currentSetting = introductionText[currentIndex];
     let i = 0;
 
@@ -47,13 +45,19 @@ export const StoryReader = ({
     };
   }, [currentIndex, introductionText]);
 
+  if (!introductionText) {
+    return null;
+  }
+
   // A text box containing the current string from the introductionText array
   // and a button to continue.
   return (
     <Box color="white" position="absolute" height="100%" width="100%">
       <VStack
         width="70%"
+        height="400px"
         position="absolute"
+        justifyContent="space-between"
         top="50%"
         left="50%"
         transform="translate(-50%, -50%)"
@@ -61,8 +65,11 @@ export const StoryReader = ({
         padding="30"
         spacing="5"
       >
-        <Text>{typedString}</Text>
+        <Text fontSize="2xl" alignSelf="start">
+          {typedString}
+        </Text>
         <Button
+          alignSelf="end"
           colorScheme="blue"
           onClick={() => {
             if (currentIndex < introductionText.length - 1) {

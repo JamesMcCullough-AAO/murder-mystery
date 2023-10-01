@@ -1,3 +1,5 @@
+import { mysteryDataType } from "../types";
+
 export const preGeneratedStory = {
   detectiveAndSidekick: {
     detective: {
@@ -15,8 +17,8 @@ export const preGeneratedStory = {
     victim: {
       name: "Eleanor Sinclair",
       pronouns: "she/her",
-      traits: "Charming, Secretive",
-      description:
+      characteristics: "Charming, Secretive",
+      visualDescription:
         "Eleanor is a stunning woman in her early 30s, with long flowing red hair and piercing green eyes, always adorned in an elegant, emerald green dress.",
       presenceReason:
         "She is a close friend of the host and attended the masquerade ball to socialize and enjoy the evening.",
@@ -25,8 +27,8 @@ export const preGeneratedStory = {
       {
         name: "Alexander Blackwood",
         pronouns: "he/him",
-        traits: "Deceptive, Ambitious",
-        description:
+        characteristics: "Deceptive, Ambitious",
+        visualDescription:
           "Alexander is a tall and handsome man in his late 40s, with slicked-back salt and pepper hair and a sharp jawline, often seen in a tailored black suit.",
         presenceReason:
           "As a prominent business associate of the host, Alexander was invited to the masquerade ball to discuss potential collaborations.",
@@ -34,8 +36,8 @@ export const preGeneratedStory = {
       {
         name: "Victoria Crane",
         pronouns: "she/her",
-        traits: "Manipulative, Wealthy",
-        description:
+        characteristics: "Manipulative, Wealthy",
+        visualDescription:
           "Victoria is an elegant woman in her early 40s, with perfectly styled blonde hair and sparkling blue eyes, always dressed in designer gowns and adorned with exquisite jewelry.",
         presenceReason:
           "Being a close friend of the victim, Victoria attended the masquerade ball to support her and enjoy the festivities.",
@@ -43,8 +45,8 @@ export const preGeneratedStory = {
       {
         name: "Nathaniel King",
         pronouns: "he/him",
-        traits: "Mysterious, Enigmatic",
-        description:
+        characteristics: "Mysterious, Enigmatic",
+        visualDescription:
           "Nathaniel is a mysterious man in his 50s, with silver hair and piercing gray eyes, often seen donning a black cape and a silver cane topped with a crystal orb.",
         presenceReason:
           "Known as a renowned collector of rare artifacts, Nathaniel was invited to the masquerade ball to showcase some of his extraordinary acquisitions.",
@@ -52,8 +54,8 @@ export const preGeneratedStory = {
       {
         name: "Isabella Rivera",
         pronouns: "she/her",
-        traits: "Seductive, Flirtatious",
-        description:
+        characteristics: "Seductive, Flirtatious",
+        visualDescription:
           "Isabella is a captivating woman in her late 20s, with long curly black hair and alluring hazel eyes, known for wearing daring and seductive outfits.",
         presenceReason:
           "As a famous actress, Isabella attended the masquerade ball to mingle with influential individuals from various industries and enhance her network.",
@@ -61,8 +63,8 @@ export const preGeneratedStory = {
       {
         name: "Marcus Johnson",
         pronouns: "he/him",
-        traits: "Jealous, Hot-tempered",
-        description:
+        characteristics: "Jealous, Hot-tempered",
+        visualDescription:
           "Marcus is a tall and muscular man in his early 40s, with closely cropped dark hair and piercing brown eyes, often dressed in designer suits.",
         presenceReason:
           "Marcus is the ex-boyfriend of the victim and attended the masquerade ball in hopes of rekindling their relationship or confronting her.",
@@ -312,4 +314,4 @@ export const preGeneratedStory = {
       "As they made their way through the corridors, Miss Marple's sharp eyes took in the opulence surrounding her. Paintings adorned the walls, their subjects long-forgotten faces gazing down silently. The scent of perfume mingled with the lively melody from the ballroom, creating an atmosphere both enticing and oppressive. The detective approached the study, the room where the crime had occurred. Intrigued and determined, she prepared herself to delve into the sinister secrets lurking behind the opulent facade.",
     ],
   },
-};
+} as Partial<mysteryDataType>;

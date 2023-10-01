@@ -1,18 +1,25 @@
-import { HStack, Heading } from "@chakra-ui/react";
+import { HStack, Heading, Text } from "@chakra-ui/react";
 import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
 
 const loadingLines = [
   "Generating mystery...",
   "Searching for clues...",
-  "Looking for suspects...",
-  "Searching for a motive...",
-  "Looking for a weapon...",
-  "Looking for a body...",
-  "Searching for a crime scene...",
-  "Looking for a witness...",
-  "Looking for a suspect...",
-  "Looking for a victim...",
+  "Gathering suspects...",
+  "Finding the truth...",
+  "Identifying a motive...",
+  "Finding the culprit...",
+  "Examining the evidence...",
+  "Solving the mystery...",
+  "Putting the clues together...",
+  "Looking for a smoking gun...",
+  "Finding the missing piece...",
+  "Following the trail...",
+  "Tracking down the killer...",
+  "Asking the right questions...",
+  "Getting to the bottom of it...",
+  "Looking for a lead...",
+  "Finding the needle in the haystack...",
 ];
 
 export const LoadingComponent = () => {
@@ -41,9 +48,9 @@ export const LoadingComponent = () => {
       transform="translate(-50%, -50%)"
       backgroundColor="blackAlpha.500"
     >
-      <Heading size="lg" color="white">
+      <Text fontSize="3xl" fontWeight="bold" color="white">
         {currentLine}
-      </Heading>
+      </Text>
       // hover animated
       <SearchIcon
         style={{

@@ -1,4 +1,5 @@
 import { generateMysteryPrompts } from "../constants/generateMysteryPrompts";
+import { preGeneratedStory } from "../constants/preGeneratedStory";
 import { mysteryDataType, prevMessagesProps } from "../types";
 import { sendPromptForObject } from "./sendPromptForObject";
 import {
@@ -14,6 +15,11 @@ type generateMysteryProps = {
 export const generateMystery = async ({
   mysteryData,
 }: generateMysteryProps) => {
+  // If localhost, use pregenerated story
+  if (process.env.NODE_ENV === "development") {
+    return preGeneratedStory as mysteryDataType;
+  }
+
   let newMysteryData = mysteryData;
   do {
     const characterDetailsPrompt = `${generateMysteryPrompts.promptIntro}

@@ -13,6 +13,7 @@ export interface Character {
   pronouns: string;
   characteristics: string;
   visualDescription: string;
+  presenceReason?: string;
 }
 
 export type mysteryDataType = {
@@ -21,9 +22,14 @@ export type mysteryDataType = {
   setting: string;
   detectiveAndSidekick: DetectiveAndSidekick;
   characterDetails: characterDetails;
-  locations: Location[];
+  locations: {
+    locationList: Location[];
+  };
   furtherDetails: furtherDetails;
-  events: event[];
+  events: {
+    eventList: event[];
+  };
+
   clues: {
     clueList: clue[];
   };
@@ -57,7 +63,7 @@ export type furtherDetails = {
   motive: string;
   location: string;
   murderMeans: string;
-  aftermath: string;
+  aftermarth: string;
   discovery: string;
 };
 
@@ -77,6 +83,7 @@ export type event = {
   involvedCharacters: string[];
   location: string;
   detail: string;
+  resolution: string;
 };
 
 export type introduction = {

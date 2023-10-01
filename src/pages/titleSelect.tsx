@@ -131,6 +131,7 @@ export const TitleSelect = ({
           p={4}
           height="150"
           borderRadius={4}
+          fontSize="2xl"
         >
           {typedSetting}
         </Box>

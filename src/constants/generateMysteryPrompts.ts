@@ -8,8 +8,8 @@ export const generateMysteryPrompts = {
     {
     "name": "David O'Leary",
     "pronouns": "he/him",
-    "traits:":"Heavy drinker, argumentative",
-    "description":"David is 53 wears an undersized black suit over his beer belly, and a bristly gray mustache beneath his nose, along with his fading gray hair."
+    "characteristics:":"Heavy drinker, argumentative",
+    "visualDescription":"David is 53 wears an undersized black suit over his beer belly, and a bristly gray mustache beneath his nose, along with his fading gray hair."
     "presenseReason":"Was invited to the dinner party by his friend Joshua."
     }
     
