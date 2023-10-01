@@ -4,20 +4,30 @@ import {
   Input,
   Textarea,
   VStack,
-  Box,
-  Switch,
   FormLabel,
   FormControl,
   HStack,
   Select,
 } from "@chakra-ui/react";
-import { Character } from "../types";
+import { Character, mysteryDataType } from "../types";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { popularPairs, pronownDropdownOptions } from "../constants";
 import { BlueWindowBox } from "../components/blueWindowBox";
 
-const DetectiveSetup: React.FC = () => {
+type DetectiveSetupProps = {
+  mysteryData: Partial<mysteryDataType>;
+  setMysteryData: React.Dispatch<
+    React.SetStateAction<Partial<mysteryDataType>>
+  >;
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const DetectiveSetup = ({
+  mysteryData,
+  setMysteryData,
+  setCurrentStep,
+}: DetectiveSetupProps) => {
   const [detective, setDetective] = useState<Character>({
     name: "",
     pronowns: "",
@@ -55,11 +65,14 @@ const DetectiveSetup: React.FC = () => {
   };
 
   const handleConfirm = () => {
-    // Handle the data (e.g., save to state, navigate to the next screen, etc.)
-    console.log("Detective:", detective);
-    if (isSidekickEnabled) {
-      console.log("Sidekick:", sidekick);
-    }
+    setMysteryData((prev) => ({
+      ...prev,
+      detectiveAndSidekick: {
+        detective: detective,
+        sidekick: isSidekickEnabled ? sidekick : undefined,
+      },
+    }));
+    setCurrentStep(1);
   };
 
   return (

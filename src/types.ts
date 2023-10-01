@@ -11,3 +11,14 @@ export interface Character {
   characteristics: string;
   visualDescription: string;
 }
+
+export type mysteryDataType = {
+  title: string;
+  description: string;
+  detectiveAndSidekick: DetectiveAndSidekick;
+};
+
+export type Setting = {
+  setting: string;
+  title: string;
+};
