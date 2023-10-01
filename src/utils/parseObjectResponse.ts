@@ -3,8 +3,8 @@
 // Remove any text after the close }.
 
 export const isValidObjectResponse = (response: string, objectName: string) => {
-  const start = response.indexOf(objectName);
-  const end = response.indexOf("}", start);
+  const start = response.indexOf("{");
+  const end = response.lastIndexOf("}");
   if (start === -1 || end === -1) {
     return false;
   }
@@ -18,8 +18,8 @@ export const isValidObjectResponse = (response: string, objectName: string) => {
 };
 
 export const parseObjectResponse = (response: string, objectName: string) => {
-  const start = response.indexOf(objectName);
-  const end = response.indexOf("}", start);
+  const start = response.indexOf("{");
+  const end = response.lastIndexOf("}");
   const parsedResponse = response.substring(start, end + 1);
   return JSON.parse(parsedResponse);
 };

@@ -59,7 +59,7 @@ export const TitleSelect = ({
       if (i < currentSetting.length) {
         setTypedSetting((prev) => prev + currentSetting.charAt(i));
         i++;
-        typeWriterRef.current = setTimeout(typeWriter, 50); // 50ms per character, adjust as needed
+        typeWriterRef.current = setTimeout(typeWriter, 20); // 50ms per character, adjust as needed
       }
     };
 

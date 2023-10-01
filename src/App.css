@@ -13,6 +13,18 @@
   }
 }
 
+@keyframes hover {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(360deg);
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

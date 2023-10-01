@@ -4,14 +4,14 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Sherlock Holmes",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Brilliant, Observant, Eccentric",
       visualDescription:
         "Tall, Wearing a deerstalker hat, Carries a magnifying glass",
     },
     sidekick: {
       name: "Dr. John Watson",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Loyal, Brave, Methodical",
       visualDescription: "Average height, Military bearing, Kind face",
     },
@@ -19,7 +19,7 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Hercule Poirot",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Meticulous, Intelligent, Proud of his Belgian heritage",
       visualDescription:
         "Short stature, Impeccable moustache, Always carries a cane",
@@ -29,7 +29,7 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Scooby Doo",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics:
         "Courageous (when incentivized with a treat), Loyal, Often hungry",
       visualDescription:
@@ -37,7 +37,7 @@ export const popularPairs: DetectiveAndSidekick[] = [
     },
     sidekick: {
       name: "Shaggy",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Easily frightened, Loyal to Scooby, Often hungry too",
       visualDescription: "Green shirt, Brown pants, Goatee beard",
     },
@@ -45,7 +45,7 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Sam Spade",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Hard-boiled, Cynical, Resourceful",
       visualDescription: "Sharp suit, Fedora hat, Cigarette in hand",
     },
@@ -54,7 +54,7 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Miss Marple",
-      pronowns: "she/her",
+      pronouns: "she/her",
       characteristics: "Observant, Sharp-minded, Elderly",
       visualDescription:
         "Elderly lady, Wears tweed skirts and hats, Often carries a knitting needle or a book",
@@ -64,13 +64,13 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Nick Charles",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Witty, Urbane, Heavy drinker",
       visualDescription: "Tuxedo or sharp suit, Always with a martini, Suave",
     },
     sidekick: {
       name: "Nora Charles",
-      pronowns: "she/her",
+      pronouns: "she/her",
       characteristics: "Sassy, Intelligent, Socialite",
       visualDescription:
         "Elegant evening gowns, Accompanied by their dog Asta, Carries a cocktail",
@@ -80,13 +80,13 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Dirk Gently",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Eccentric, Lazy, Intuitive",
       visualDescription: "Shabby attire, Unkempt hair, Often lost in thought",
     },
     sidekick: {
       name: "Todd Brotzman",
-      pronowns: "he/him",
+      pronouns: "he/him",
       characteristics: "Skeptical, Down on his luck, Loyal",
       visualDescription:
         "Casual attire, Slightly stressed expression, Often reacting to Dirk's antics",
@@ -96,12 +96,28 @@ export const popularPairs: DetectiveAndSidekick[] = [
   {
     detective: {
       name: "Jessica Fletcher",
-      pronowns: "she/her",
+      pronouns: "she/her",
       characteristics: "Intelligent, Persistent, Novelist",
       visualDescription:
         "Middle-aged to elderly, Professional attire, Often with a typewriter or pen and paper",
     },
     // Jessica Fletcher is from "Murder, She Wrote" and doesn't have a regular sidekick.
+  },
+  {
+    detective: {
+      name: "Chief Inspector Tom Barnaby",
+      pronouns: "he/him",
+      characteristics: "Methodical, Patient, Insightful",
+      visualDescription:
+        "Middle-aged, Grey hair, Often seen in a suit with tie",
+    },
+    sidekick: {
+      name: "Sergeant Gavin Troy",
+      pronouns: "he/him",
+      characteristics: "Loyal, Younger, Sometimes impulsive",
+      visualDescription:
+        "Younger than Barnaby, Dark hair, Often in uniform or suit",
+    },
   },
 ];
 

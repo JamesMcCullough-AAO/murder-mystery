@@ -8,29 +8,30 @@ const openai = new OpenAI({
 
 type sendChatMessageProps = {
   message: string;
-  prevMessages: prevMessagesProps;
+  prevMessages?: prevMessagesProps;
 };
 
 export const sendChatMessage = async ({
   message,
-  prevMessages,
+  prevMessages = [],
 }: sendChatMessageProps) => {
-  const chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: "user", content: message }],
-    model: "gpt-3.5-turbo",
-  });
-
   prevMessages.push({
     role: "user",
     content: message,
   });
+
+  const chatCompletion = await openai.chat.completions.create({
+    messages: prevMessages,
+    model: "gpt-3.5-turbo",
+  });
+
   if (chatCompletion.choices[0].message.content != null) {
     prevMessages.push({
-      role: "AI",
+      role: "assistant",
       content: chatCompletion.choices[0].message.content,
     });
 
     return prevMessages;
   }
-  return prevMessages;
+  return null;
 };

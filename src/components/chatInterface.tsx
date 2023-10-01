@@ -22,12 +22,12 @@ const ChatInterface: React.FC = () => {
           message: inputText,
           prevMessages: chatHistory,
         });
-        setChatHistory(updatedHistory);
+        if (updatedHistory) setChatHistory(updatedHistory);
       } catch (error) {
         setChatHistory((prev) => [
           ...prev,
           {
-            role: "AI",
+            role: "assistant",
             content: "Sorry, something went wrong. Please try again.",
           },
         ]);

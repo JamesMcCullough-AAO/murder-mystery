@@ -30,14 +30,14 @@ const DetectiveSetup = ({
 }: DetectiveSetupProps) => {
   const [detective, setDetective] = useState<Character>({
     name: "",
-    pronowns: "",
+    pronouns: "",
     characteristics: "",
     visualDescription: "",
   });
 
   const [sidekick, setSidekick] = useState<Character>({
     name: "",
-    pronowns: "",
+    pronouns: "",
     characteristics: "",
     visualDescription: "",
   });
@@ -57,7 +57,7 @@ const DetectiveSetup = ({
       setIsSidekickEnabled(false);
       setSidekick({
         name: "",
-        pronowns: "",
+        pronouns: "",
         characteristics: "",
         visualDescription: "",
       });
@@ -92,9 +92,9 @@ const DetectiveSetup = ({
             <FormLabel>Pronouns of Detective</FormLabel>
             <Select
               placeholder="Select pronouns"
-              value={detective.pronowns}
+              value={detective.pronouns}
               onChange={(e) =>
-                setDetective((prev) => ({ ...prev, pronowns: e.target.value }))
+                setDetective((prev) => ({ ...prev, pronouns: e.target.value }))
               }
             >
               {pronownDropdownOptions.map((option) => (
@@ -145,11 +145,11 @@ const DetectiveSetup = ({
               <FormLabel>Pronouns of Sidekick</FormLabel>
               <Select
                 placeholder="Select pronouns"
-                value={sidekick.pronowns}
+                value={sidekick.pronouns}
                 onChange={(e) =>
                   setSidekick((prev) => ({
                     ...prev,
-                    pronowns: e.target.value,
+                    pronouns: e.target.value,
                   }))
                 }
               >
