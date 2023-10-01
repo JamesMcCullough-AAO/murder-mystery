@@ -13,8 +13,8 @@ export const generateMysteryPrompts = {
     "presenseReason":"Was invited to the dinner party by his friend Joshua."
     }
     
-    Now, please generate the objects in a javascript object of arrays. For example:
-    characterDetails: {
+    Now, please generate the objects in a JSON object. For example:
+    {
     victim:{...victim object...},
     suspects:[...suspect objects,],
     }
@@ -29,7 +29,7 @@ export const generateMysteryPrompts = {
     discovery: Who first discovers the body? How does it get reported to the police / detectives?
     
     Please return as a JSON object formatted like this:
-    "furtherDetails": {
+    {
     "murderer": "David O'Leary"
     "motive": "Kevin had lent him some money in the past, and was threatening him for it back. David killed him in a drunken rage."
     "location": "The Library"
@@ -49,8 +49,8 @@ export const generateMysteryPrompts = {
     "resolution": "Both men were secretly a couple and were cheating on their wives, but didn't want to show it in public."
     }
     
-    Please return in a JSON object called events, like this example:
-    "events": {
+    Please return in a JSON object like this example:
+    {
       "eventList": [
         {...event 1 details...},
         {...event 2 details...},
@@ -72,10 +72,9 @@ export const generateMysteryPrompts = {
     "unlockMeans": "The detectives find the shattered glass on the floor of the study."
     }
     
-    The example object will be
-    "mysteryClues": 
+    The example object will be returned in a JSON object like this:
     {
-    "clues":[...clues in here...],
+    "clueList":[...clues in here...],
     }
     
     Please don't include any extra text other before or after the object. Thank you!`,
@@ -91,8 +90,8 @@ export const generateMysteryPrompts = {
       "revealSuspects": ["Kevin Sullivan"]
     }
 
-    Please return in a JSON object called redHerrings, like this example:
-    "redHerrings": {
+    Please return in a JSON object, like this example:
+    {
       "clueList": [
         {...clue 1 details...},
         {...clue 2 details...},
@@ -111,8 +110,8 @@ export const generateMysteryPrompts = {
     "charactersPresent": ["David O'Leary"]
     }
     
-    Please return in the format of a JSON object called locations like this:
-    "locations": {
+    Please return in the format of a JSON object like this:
+    {
       "locationList": [
         {...location 1 details...},
         {...location 2 details...},
@@ -128,8 +127,8 @@ export const generateMysteryPrompts = {
       "Kevin Sullivan":"The Garden",
     }
     
-    Please return in the format of a JSON object called suspectLocations like this:
-    suspectLocations: {
+    Please return in the format of a JSON object like this:
+    {
       "David O'Leary":"The Kitchen",
       "Kevin Sullivan":"The Garden",
     }
@@ -141,7 +140,7 @@ export const generateMysteryPrompts = {
     Please return this in a json object, containing introductionText, which is an array of paragraph length strings.
     
     Example object:
-    introduction: {
+    {
     introductionText: [
       "It was a dark and stormy... rest of paragraph.",
       "Then, the detective walked through... rest of paragrah",

@@ -3,6 +3,8 @@
 // Remove any text after the close }.
 
 export const isValidObjectResponse = (response: string, objectName: string) => {
+  // start is the first {, or the first { after the object name, if he object name exists.
+
   const start = response.indexOf("{");
   const end = response.lastIndexOf("}");
   if (start === -1 || end === -1) {

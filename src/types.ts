@@ -24,8 +24,12 @@ export type mysteryDataType = {
   locations: Location[];
   furtherDetails: furtherDetails;
   events: event[];
-  clues: clue[];
-  redHerrings: clue[];
+  clues: {
+    clueList: clue[];
+  };
+  redHerrings: {
+    clueList: clue[];
+  };
   introduction: introduction;
 };
 

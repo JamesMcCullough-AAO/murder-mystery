@@ -53,11 +53,11 @@ export const TitleSelect = ({
 
   useEffect(() => {
     const currentSetting = settings[currentIndex].setting;
-    let i = -1;
+    let i = 0;
 
     const typeWriter = () => {
       if (i < currentSetting.length) {
-        setTypedSetting((prev) => prev + currentSetting.charAt(i));
+        setTypedSetting(currentSetting.substring(0, i + 1));
         i++;
         typeWriterRef.current = setTimeout(typeWriter, 20); // 50ms per character, adjust as needed
       }

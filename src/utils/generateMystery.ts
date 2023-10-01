@@ -1,6 +1,11 @@
 import { generateMysteryPrompts } from "../constants/generateMysteryPrompts";
 import { mysteryDataType, prevMessagesProps } from "../types";
 import { sendPromptForObject } from "./sendPromptForObject";
+import {
+  flattenMatchingKeys,
+  isValidCharacterDetails,
+  isValidfurtherDetails,
+} from "./validFormatter";
 
 type generateMysteryProps = {
   mysteryData: Partial<mysteryDataType>;
@@ -10,23 +15,41 @@ export const generateMystery = async ({
   mysteryData,
 }: generateMysteryProps) => {
   let newMysteryData = mysteryData;
-  const characterDetailsPrompt = `${generateMysteryPrompts.promptIntro}
-        ${JSON.stringify(newMysteryData)}
-        ${generateMysteryPrompts.characterDetailsPrompt}`;
-  const characterDetails = await sendPromptForObject({
-    objectName: "characterDetails",
-    prompt: characterDetailsPrompt,
-  });
-  newMysteryData = { ...newMysteryData, characterDetails: characterDetails };
+  do {
+    const characterDetailsPrompt = `${generateMysteryPrompts.promptIntro}
+          ${JSON.stringify(newMysteryData)}
+          ${generateMysteryPrompts.characterDetailsPrompt}`;
+    const characterDetails = await sendPromptForObject({
+      objectName: "characterDetails",
+      prompt: characterDetailsPrompt,
+    });
+    // if (!isValidCharacterDetails(characterDetails)) {
+    //   console.log("Invalid character details");
+    //   continue;
+    // }
+    newMysteryData = {
+      ...newMysteryData,
+      characterDetails: characterDetails,
+    };
+  } while (!newMysteryData.characterDetails);
 
-  const furtherDetailsPrompt = `${generateMysteryPrompts.promptIntro}
+  do {
+    const furtherDetailsPrompt = `${generateMysteryPrompts.promptIntro}
        ${JSON.stringify(newMysteryData)}
         ${generateMysteryPrompts.furtherDetailsPrompt}`;
-  const furtherDetails = await sendPromptForObject({
-    objectName: "furtherDetails",
-    prompt: furtherDetailsPrompt,
-  });
-  newMysteryData = { ...newMysteryData, furtherDetails: furtherDetails };
+    const furtherDetails = await sendPromptForObject({
+      objectName: "furtherDetails",
+      prompt: furtherDetailsPrompt,
+    });
+    // if (!isValidfurtherDetails(furtherDetails)) {
+    //   console.log("Invalid further details");
+    //   continue;
+    // }
+    newMysteryData = {
+      ...newMysteryData,
+      furtherDetails: furtherDetails,
+    };
+  } while (!newMysteryData.furtherDetails);
 
   const eventsPrompt = `${generateMysteryPrompts.promptIntro}
        ${JSON.stringify(newMysteryData)}
@@ -74,6 +97,8 @@ export const generateMystery = async ({
     prompt: introductionPrompt,
   });
   newMysteryData = { ...newMysteryData, introduction: introduction };
+
+  console.log("newMysteryData", newMysteryData);
 
   return newMysteryData;
 };

@@ -9,6 +9,7 @@ import { generateMystery } from "./utils/generateMystery";
 
 import { StoryReader } from "./pages/StoryReader";
 import { LoadingComponent } from "./components/loadingComponent";
+import { GameMenu } from "./pages/investigationMenu";
 
 function App() {
   const [mysteryData, setMysteryData] = React.useState<
@@ -52,6 +53,14 @@ function App() {
         <StoryReader
           introductionText={mysteryData.introduction?.introductionText}
           setInStoryReader={setInStoryReader}
+          onStoryComplete={() => setCurrentStep(4)}
+        />
+      )}
+      {currentStep === 4 && (
+        <GameMenu
+          location={mysteryData.locations?.[0]?.location || ""}
+          suspects={mysteryData.characterDetails?.suspects || []}
+          clues={mysteryData.clues?.clueList || []}
         />
       )}
     </Box>
