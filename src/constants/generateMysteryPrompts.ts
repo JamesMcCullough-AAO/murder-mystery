@@ -134,8 +134,8 @@ export const generateMysteryPrompts = {
     }
 
     Please don't include any extra text other before or after the object. Thank you!`,
-  introductionPrompt: `It's time to generate the introduction. Write an introduction to the story introducing the setting, the detectives arrival on the scene, why they are there (are they just aboard the train, have the police called them in, is there a personal reason they are investigating the case?)
-    Write in the style of a murder mystery novel, and take the time to set the scene as the detectives arrive. The introduction should end with the detective in the location where the crime occured, and just about to investigate.
+  introductionPrompt: `It's time to generate the introduction. Write an introduction to the story introducing the setting, the detectives arrival on the scene, why they are there (are they just aboard the train, have the police called them in, or is there a personal reason they are investigating the case?)
+    Write in the style of a murder mystery novel, and take the time to set the scene as the detectives arrive. The introduction should end with the detective about to step into the location where the crime occured.
     
     Please return this in a json object, containing introductionText, which is an array of paragraph length strings.
     

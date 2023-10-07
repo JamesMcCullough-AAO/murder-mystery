@@ -21,7 +21,7 @@ export const returnDataForLocationEntry = ({
     throw new Error("Invalid location or character data");
 
   return {
-    detectiveAndSidekick: mysteryData.detectiveAndSidekick,
+    DetectiveDetails: mysteryData.DetectiveDetails,
     location: {
       location: currentLocationData.location,
       description: currentLocationData.description,

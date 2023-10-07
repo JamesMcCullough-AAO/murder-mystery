@@ -3,13 +3,14 @@ import logo from "./logo.svg";
 import "./App.css";
 import DetectiveSetup from "./pages/detectiveSetup";
 import { Box, HStack, Heading } from "@chakra-ui/react";
-import { Location, mysteryDataType } from "./types";
+import { Location, investigationStory, mysteryDataType } from "./types";
 import { TitleSelect } from "./pages/titleSelect";
 import { generateMystery } from "./utils/generateMystery";
 
 import { StoryReader } from "./pages/StoryReader";
 import { LoadingComponent } from "./components/loadingComponent";
 import { GameMenu } from "./pages/investigationMenu";
+import { generateInvestigationStory } from "./utils/generateInvestigationStory";
 
 function App() {
   const [mysteryData, setMysteryData] = React.useState<
@@ -18,6 +19,11 @@ function App() {
   const [currentStep, setCurrentStep] = React.useState(0);
   const [inStoryReader, setInStoryReader] = React.useState(false);
   const [currentLocation, setCurrentLocation] = React.useState("");
+  const [investigationStory, setInvestigationStory] =
+    React.useState<investigationStory>({
+      locations: {},
+      suspects: {},
+    });
 
   // When the currentStep changes to 2, we want to generate the mystery. Call async generateMystery function, and when complete set the mysteryData to the new mysteryData, and set the currentStep to 3
   React.useEffect(() => {
@@ -25,6 +31,10 @@ function App() {
       generateMystery({ mysteryData }).then((newMysteryData) => {
         setMysteryData(newMysteryData);
         setCurrentStep(3);
+        generateInvestigationStory({
+          mysteryData: newMysteryData as mysteryDataType,
+          setInvestigationStory: setInvestigationStory,
+        });
       });
     }
   }, [currentStep]);

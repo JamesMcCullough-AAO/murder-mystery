@@ -1,6 +1,6 @@
-import { DetectiveAndSidekick } from "./types";
+import { DetectiveDetails } from "./types";
 
-export const popularPairs: DetectiveAndSidekick[] = [
+export const popularPairs: DetectiveDetails[] = [
   {
     detective: {
       name: "Sherlock Holmes",

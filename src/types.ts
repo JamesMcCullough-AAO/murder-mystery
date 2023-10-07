@@ -3,7 +3,7 @@ export type prevMessagesProps = {
   content: string;
 }[];
 
-export interface DetectiveAndSidekick {
+export interface DetectiveDetails {
   detective: Character;
   sidekick?: Character;
 }
@@ -20,7 +20,7 @@ export type mysteryDataType = {
   title: string;
   description: string;
   setting: string;
-  detectiveAndSidekick: DetectiveAndSidekick;
+  DetectiveDetails: DetectiveDetails;
   characterDetails: characterDetails;
   locations: {
     locationList: Location[];
@@ -88,4 +88,21 @@ export type event = {
 
 export type introduction = {
   introductionText: string[];
+};
+
+export type investigationStory = {
+  locations: Record<
+    string,
+    {
+      entrance: string[];
+      investigation: string[];
+    }
+  >;
+  suspects: Record<
+    string,
+    {
+      initialQuestioning: string[];
+      clueQuestions: Record<string, string[]>;
+    }
+  >;
 };

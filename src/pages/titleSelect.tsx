@@ -90,10 +90,10 @@ export const TitleSelect = ({
       >
         {/* Detective and Detective Sidekick star in... */}
         <Heading size="md" mb={4}>
-          {mysteryData?.detectiveAndSidekick?.detective.name}
-          {mysteryData?.detectiveAndSidekick?.sidekick
+          {mysteryData?.DetectiveDetails?.detective.name}
+          {mysteryData?.DetectiveDetails?.sidekick
             ? " and " +
-              mysteryData.detectiveAndSidekick.sidekick.name +
+              mysteryData.DetectiveDetails.sidekick.name +
               " star in..."
             : " stars in..."}
         </Heading>

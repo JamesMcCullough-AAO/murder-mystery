@@ -17,7 +17,7 @@ import {
   ModalCloseButton,
   ModalBody,
 } from "@chakra-ui/react";
-import { Character, DetectiveAndSidekick, mysteryDataType } from "../types";
+import { Character, DetectiveDetails, mysteryDataType } from "../types";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { popularPairs, pronownDropdownOptions } from "../constants";
@@ -61,7 +61,7 @@ const DetectiveSetup = ({
     onListOpen();
   };
 
-  const handlePrepopulate = (selected: DetectiveAndSidekick) => {
+  const handlePrepopulate = (selected: DetectiveDetails) => {
     setDetective(selected.detective);
 
     if (selected.sidekick) {
@@ -81,7 +81,7 @@ const DetectiveSetup = ({
   const handleConfirm = () => {
     setMysteryData((prev) => ({
       ...prev,
-      detectiveAndSidekick: {
+      DetectiveDetails: {
         detective: detective,
         sidekick: isSidekickEnabled ? sidekick : undefined,
       },

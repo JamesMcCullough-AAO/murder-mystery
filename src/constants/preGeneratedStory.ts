@@ -1,7 +1,7 @@
 import { mysteryDataType } from "../types";
 
 export const preGeneratedStory = {
-  detectiveAndSidekick: {
+  DetectiveDetails: {
     detective: {
       name: "Miss Marple",
       pronouns: "she/her",
