@@ -59,14 +59,28 @@ export const generateInvestigationStory = async ({
           completedSuspects.push(characterPresent);
         }
       });
-    // Pick a neighboring location not already completed
+    // Pick a neighboring location not already completed. If none, pick a random location not already completed.
     const neighboringLocation =
       mysteryData.locations.locationList
         .find((locationData) => locationData.location === currentLocation)
         ?.neighboringLocations.find(
           (neighboringLocation) =>
             !completedLocations.includes(neighboringLocation)
-        ) || "";
+        ) ||
+      // If no neighboring location, pick a random location not already completed
+      mysteryData.locations.locationList
+        .filter(
+          (locationData) => !completedLocations.includes(locationData.location)
+        )
+        .map((locationData) => locationData.location)[
+        Math.floor(
+          Math.random() *
+            mysteryData.locations.locationList.filter(
+              (locationData) =>
+                !completedLocations.includes(locationData.location)
+            ).length
+        )
+      ];
     // Set current location to neighboring location
     currentLocation = neighboringLocation;
   }
