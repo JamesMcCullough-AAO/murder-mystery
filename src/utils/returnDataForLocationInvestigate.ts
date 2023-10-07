@@ -12,10 +12,10 @@ export const returnDataForLocationInvestigate = ({
   isCrimeScene,
 }: returnDataForLocationInvestigateProps) => {
   const currentLocationData = mysteryData.locations.locationList.find(
-    (locationData) => locationData.location === location
+    (locationData) => locationData.location == location
   );
   const cluesPresent = mysteryData.clues.clueList.find(
-    (clueData) => clueData.location === location
+    (clueData) => clueData.location == location
   );
 
   const murderData = {
@@ -24,7 +24,7 @@ export const returnDataForLocationInvestigate = ({
     discovery: mysteryData.furtherDetails.discovery,
   };
 
-  if (!currentLocationData || !cluesPresent)
+  if (currentLocationData === undefined || cluesPresent === undefined)
     throw new Error("Invalid location or character data");
 
   return {

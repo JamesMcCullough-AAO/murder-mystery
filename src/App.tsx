@@ -19,6 +19,8 @@ function App() {
   const [currentStep, setCurrentStep] = React.useState(0);
   const [inStoryReader, setInStoryReader] = React.useState(false);
   const [currentLocation, setCurrentLocation] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [readerText, setReaderText] = React.useState<string[]>([]);
   const [investigationStory, setInvestigationStory] =
     React.useState<investigationStory>({
       locations: {},
@@ -31,13 +33,19 @@ function App() {
       generateMystery({ mysteryData }).then((newMysteryData) => {
         setMysteryData(newMysteryData);
         setCurrentStep(3);
-        generateInvestigationStory({
-          mysteryData: newMysteryData as mysteryDataType,
-          setInvestigationStory: setInvestigationStory,
-        });
       });
     }
   }, [currentStep]);
+
+  // An aysnc function to generate the investigation story. Begins when current step is set to 3, and awaits it's completion.
+  // React.useEffect(() => {
+  //   if (currentStep === 3) {
+  //     generateInvestigationStory({
+  //       mysteryData: mysteryData as mysteryDataType,
+  //       setInvestigationStory: setInvestigationStory,
+  //     });
+  //   }
+  // }, [currentStep]);
 
   const startGame = () => {
     // Set the current location to the scene of the murder.
@@ -73,13 +81,26 @@ function App() {
           onStoryComplete={() => startGame()}
         />
       )}
-      {currentStep === 4 && (
-        <GameMenu
-          location={currentLocation}
-          mysteryData={mysteryData}
-          setLocation={setCurrentLocation}
-        />
-      )}
+      {currentStep === 4 &&
+        (isLoading ? (
+          <LoadingComponent />
+        ) : readerText.length > 0 ? (
+          <StoryReader
+            introductionText={readerText}
+            setInStoryReader={setInStoryReader}
+            onStoryComplete={() => {
+              setReaderText([]);
+            }}
+          />
+        ) : (
+          <GameMenu
+            location={currentLocation}
+            mysteryData={mysteryData}
+            setLocation={setCurrentLocation}
+            setIsLoading={setIsLoading}
+            setReaderText={setReaderText}
+          />
+        ))}
     </Box>
   );
 }

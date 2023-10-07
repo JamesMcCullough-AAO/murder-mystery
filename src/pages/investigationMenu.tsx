@@ -12,17 +12,22 @@ import {
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import { Character, clue, mysteryDataType } from "../types";
 import { useState } from "react";
+import { generateLocationInvestigationStory } from "../utils/generateLocationInvestigationStory";
 
 interface Props {
   location: string;
   mysteryData: Partial<mysteryDataType>;
   setLocation: (location: string) => void;
+  setIsLoading: (isLoading: boolean) => void;
+  setReaderText: (readerText: string[]) => void;
 }
 
 export const GameMenu: React.FC<Props> = ({
   location,
   setLocation,
   mysteryData,
+  setIsLoading,
+  setReaderText,
 }) => {
   const [unlockedClues, setUnlockedClues] = useState<clue[]>([]);
 
@@ -39,6 +44,20 @@ export const GameMenu: React.FC<Props> = ({
 
   const neighboringLocations = currentLocationData?.neighboringLocations || [];
 
+  const handleInvestigate = async () => {
+    setIsLoading(true);
+    // Generate the story for the room's investigation
+    const story = await generateLocationInvestigationStory({
+      location: location,
+      mysteryData: mysteryData as mysteryDataType,
+    });
+
+    // Set the reader text to the story
+    setReaderText(story);
+
+    setIsLoading(false);
+  };
+
   return (
     <Flex direction="column" align="start" p={4}>
       {/* Current Location */}
@@ -47,7 +66,13 @@ export const GameMenu: React.FC<Props> = ({
       </Heading>
 
       {/* Investigate Button */}
-      <Button colorScheme="blue" mb={2}>
+      <Button
+        colorScheme="blue"
+        mb={2}
+        onClick={() => {
+          handleInvestigate();
+        }}
+      >
         Investigate
       </Button>
 
@@ -65,11 +90,6 @@ export const GameMenu: React.FC<Props> = ({
           </MenuList>
         </Menu>
       ))}
-
-      {/* Travel Button */}
-      <Button colorScheme="green" mb={2}>
-        Travel to another location
-      </Button>
 
       {/* Show Clues */}
       <Menu>

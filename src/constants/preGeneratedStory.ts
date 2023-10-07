@@ -3,315 +3,319 @@ import { mysteryDataType } from "../types";
 export const preGeneratedStory = {
   DetectiveDetails: {
     detective: {
-      name: "Miss Marple",
-      pronouns: "she/her",
-      characteristics: "Observant, Sharp-minded, Elderly",
+      name: "Sherlock Holmes",
+      pronouns: "he/him",
+      characteristics: "Brilliant, Observant, Eccentric",
       visualDescription:
-        "Elderly lady, Wears tweed skirts and hats, Often carries a knitting needle or a book",
+        "Tall, Wearing a deerstalker hat, Carries a magnifying glass",
+    },
+    sidekick: {
+      name: "Dr. John Watson",
+      pronouns: "he/him",
+      characteristics: "Loyal, Brave, Methodical",
+      visualDescription: "Average height, Military bearing, Kind face",
     },
   },
-  title: "The Masquerade's Midnight Deceit",
+  title: "Whispers in Windermere",
   setting:
-    "In an opulent mansion, elite members of society gather for a masquerade ball. But as the clock strikes midnight, a masked guest is discovered dead, with no signs of who could have done the deed.",
+    "The tranquil village of Windermere, known for its serene lakes and picturesque landscapes, becomes the center of intrigue when a local is found dead under suspicious circumstances. As the village comes to terms with the event, secrets that have long been buried begin to surface.",
   characterDetails: {
     victim: {
-      name: "Eleanor Sinclair",
+      name: "Emily Lancaster",
       pronouns: "she/her",
-      characteristics: "Charming, Secretive",
+      characteristics: "Reserved, Mysterious",
       visualDescription:
-        "Eleanor is a stunning woman in her early 30s, with long flowing red hair and piercing green eyes, always adorned in an elegant, emerald green dress.",
+        "Emily is a petite woman in her early thirties with long, dark hair and piercing blue eyes. She is often seen wearing flowy dresses and a silver locket around her neck.",
       presenceReason:
-        "She is a close friend of the host and attended the masquerade ball to socialize and enjoy the evening.",
+        "Recently moved to Windermere and was attending a social event at the village hall.",
     },
     suspects: [
       {
-        name: "Alexander Blackwood",
+        name: "Joshua Sinclair",
         pronouns: "he/him",
-        characteristics: "Deceptive, Ambitious",
+        characteristics: "Charismatic, Wealthy",
         visualDescription:
-          "Alexander is a tall and handsome man in his late 40s, with slicked-back salt and pepper hair and a sharp jawline, often seen in a tailored black suit.",
+          "Joshua is a tall man in his forties with slicked-back dark hair and an expensive suit. He exudes confidence and always has a charming smile on his face.",
         presenceReason:
-          "As a prominent business associate of the host, Alexander was invited to the masquerade ball to discuss potential collaborations.",
+          "Organized a charity gala in Windermere and invited everyone to his mansion for a post-event gathering.",
       },
       {
-        name: "Victoria Crane",
+        name: "Amelia Turner",
         pronouns: "she/her",
-        characteristics: "Manipulative, Wealthy",
+        characteristics: "Manipulative, Cunning",
         visualDescription:
-          "Victoria is an elegant woman in her early 40s, with perfectly styled blonde hair and sparkling blue eyes, always dressed in designer gowns and adorned with exquisite jewelry.",
+          "Amelia is a middle-aged woman with short red hair, thick-rimmed glasses, and a calculating gaze. She dresses impeccably and carries an air of sophistication.",
         presenceReason:
-          "Being a close friend of the victim, Victoria attended the masquerade ball to support her and enjoy the festivities.",
+          "Owns a luxury hotel in Windermere and was hosting an exclusive party for influential guests.",
       },
       {
-        name: "Nathaniel King",
+        name: "Thomas Fletcher",
         pronouns: "he/him",
-        characteristics: "Mysterious, Enigmatic",
+        characteristics: "Introverted, Bookish",
         visualDescription:
-          "Nathaniel is a mysterious man in his 50s, with silver hair and piercing gray eyes, often seen donning a black cape and a silver cane topped with a crystal orb.",
+          "Thomas is a young man in his twenties with disheveled brown hair, wearing oversized glasses. He is usually seen carrying a backpack full of books.",
         presenceReason:
-          "Known as a renowned collector of rare artifacts, Nathaniel was invited to the masquerade ball to showcase some of his extraordinary acquisitions.",
+          "Moved to Windermere to work in the local library and attended a book club meeting at the village hall.",
       },
       {
-        name: "Isabella Rivera",
+        name: "Eleanor Blackwood",
         pronouns: "she/her",
-        characteristics: "Seductive, Flirtatious",
+        characteristics: "Charming, Socialite",
         visualDescription:
-          "Isabella is a captivating woman in her late 20s, with long curly black hair and alluring hazel eyes, known for wearing daring and seductive outfits.",
+          "Eleanor is an elegant woman in her fifties with perfectly styled silver hair and sparkling jewelry. She wears designer dresses and always carries herself with grace.",
         presenceReason:
-          "As a famous actress, Isabella attended the masquerade ball to mingle with influential individuals from various industries and enhance her network.",
+          "Owns a grand estate in Windermere and organized a garden party for the village residents.",
       },
       {
-        name: "Marcus Johnson",
+        name: "Samuel Reynolds",
         pronouns: "he/him",
-        characteristics: "Jealous, Hot-tempered",
+        characteristics: "Reclusive, Mysterious",
         visualDescription:
-          "Marcus is a tall and muscular man in his early 40s, with closely cropped dark hair and piercing brown eyes, often dressed in designer suits.",
+          "Samuel is an older man with a long white beard and a worn-out hat. He dresses in faded, tattered clothing and often keeps to himself in the outskirts of Windermere.",
         presenceReason:
-          "Marcus is the ex-boyfriend of the victim and attended the masquerade ball in hopes of rekindling their relationship or confronting her.",
+          "Samuel has lived in Windermere for years and was seen wandering near the crime scene due to his habit of collecting herbs and plants from the area.",
       },
     ],
   },
   furtherDetails: {
-    murderer: "Alexander Blackwood",
+    murderer: "Joshua Sinclair",
     motive:
-      "Eleanor had discovered Alexander's secret embezzlement scheme and threatened to expose him, so he silenced her permanently.",
-    location: "The Study",
+      "Emily Lancaster had discovered some embezzlement activities done by Joshua Sinclair, which threatened his reputation and financial status. To protect himself, Joshua decided to eliminate her.",
+    location: "Joshua Sinclair's mansion",
     murderMeans:
-      "Alexander poisoned Eleanor's drink with a lethal dose of a rare and undetectable poison. She collapsed and died within minutes.",
+      "During their conversation in his private study, Joshua poisoned Emily's drink with a lethal dose of a rare, undetectable poison. Emily unknowingly consumed it, resulting in her death.",
     aftermarth:
-      "After the murder, Alexander calmly wiped down any traces of his presence in the study and mingled with the other guests, acting unsuspecting. He later discarded any incriminating evidence discreetly in a hidden compartment in his briefcase.",
+      "After the murder, Joshua meticulously cleaned the study, removing any traces of the poison. He disposed of the remaining poison vial in a hidden compartment in his desk. He then joined the post-event gathering to establish an alibi.",
     discovery:
-      "Marcus Johnson, the ex-boyfriend of the victim, stumbled upon the lifeless body while searching for Eleanor to confront her about their past relationship. Horrified, he immediately alerted Miss Marple and her sidekick, who then reported the murder to the police.",
+      "Dr. John Watson, while examining Emily's body, noticed unusual symptoms that hinted at poisoning. He immediately informed Detective Sherlock Holmes, who took charge of the investigation.",
   },
   events: {
     eventList: [
       {
-        name: "The Stolen Necklace",
-        involvedCharacters: ["Victoria Crane", "Isabella Rivera"],
-        location: "The Ballroom",
+        name: "A secret meeting",
+        involvedCharacters: ["Amelia Turner", "Eleanor Blackwood"],
+        location: "Amelia's Office",
         detail:
-          "During the masquerade ball, Victoria noticed that her expensive diamond necklace was missing. Isabella was seen near the area at the time the necklace disappeared.",
+          "One evening, Amelia and Eleanor were spotted having a secret meeting in Amelia's office. They were engaged in a heated argument, with raised voices and gestures.",
         resolution:
-          "It was later discovered that Isabella had stolen the necklace to pay off a gambling debt. She had planned to sell it discreetly, but panicked when she realized Victoria had noticed it was gone.",
+          "It was revealed that Amelia had discovered Eleanor's affair with a prominent businessman, which threatened her reputation in high society. The argument was over Eleanor's insistence on breaking off their relationship.",
       },
       {
-        name: "The Mysterious Phone Call",
-        involvedCharacters: ["Nathaniel King", "Eleanor Sinclair"],
-        location: "The Garden",
+        name: "An unexpected confrontation",
+        involvedCharacters: ["Joshua Sinclair", "Thomas Fletcher"],
+        location: "Library",
         detail:
-          "Eleanor received a mysterious phone call in the garden during the masquerade ball. Nathaniel was seen nearby, eavesdropping on the conversation.",
+          "While Thomas was working in the library, Joshua entered in a visibly agitated state. He accused Thomas of spreading rumors about him and Emily's relationship, leading to a heated exchange of words.",
         resolution:
-          "It was revealed that Nathaniel had been blackmailing Eleanor with information about her involvement in an illegal art trade. The phone call was a heated argument about the escalating threats.",
+          "Later, it was discovered that Joshua found out about Thomas overhearing a private conversation between him and Emily, discussing their illicit affair. Joshua confronted Thomas in a fit of anger, fearing his secret would be exposed.",
       },
       {
-        name: "The Public Argument",
-        involvedCharacters: ["Marcus Johnson", "Eleanor Sinclair"],
-        location: "The Terrace",
+        name: "A secretive transaction",
+        involvedCharacters: ["Eleanor Blackwood", "Samuel Reynolds"],
+        location: "Outskirts of Windermere",
         detail:
-          "An intense argument between Marcus and Eleanor took place on the terrace, causing a scene during the masquerade ball.",
+          "Late at night, Eleanor and Samuel were seen exchanging an envelope by the outskirts of Windermere. They were cautious and seemed to be engaged in a secretive transaction.",
         resolution:
-          "It was later uncovered that the argument erupted due to Marcus discovering Eleanor's affair with Alexander. Marcus confronted her about it, leading to a heated exchange of accusations and insults.",
-      },
-      {
-        name: "The Suspicious Document",
-        involvedCharacters: ["Nathaniel King", "Victoria Crane"],
-        location: "The Library",
-        detail:
-          "Victoria found a document in the library that seemed to implicate Nathaniel in an illegal artifact smuggling operation.",
-        resolution:
-          "Upon closer inspection, it was revealed that the document was a forgery planted by Victoria herself. She did it to tarnish Nathaniel's reputation and gain an advantage in their ongoing rivalry over unique artifacts.",
+          "It was eventually revealed that Samuel had evidence of Eleanor's involvement in illegal antique trading. Eleanor had sought out Samuel to bribe him into keeping silent about her activities, resulting in their secretive exchange.",
       },
     ],
   },
   clues: {
     clueList: [
       {
-        name: "Masked Guest's Identity",
-        detail:
-          "Miss Marple discovers a torn piece of fabric from the guest's mask in the Study.",
-        location: "The Study",
+        name: "Emily's Silver Locket",
+        detail: "Emily's silver locket is found at Joshua Sinclair's mansion.",
+        location: "Joshua Sinclair's Study",
         unlockingClue: null,
         unlockMeans:
-          "Miss Marple notices the torn fabric while examining the crime scene.",
+          "Detective Sherlock Holmes notices the locket lying on the floor during the investigation at Joshua Sinclair's mansion.",
       },
       {
-        name: "Suspicious Powder",
+        name: "Emily's Diary",
         detail:
-          "A small vial containing a mysterious white powder is found in the victim's clutch purse.",
-        location: "Eleanor Sinclair's Clutch Purse",
+          "Emily's diary contains cryptic entries that hint at her discovery of some illegal activities.",
+        location: "Emily Lancaster's Home",
         unlockingClue: null,
         unlockMeans:
-          "Miss Marple searches through Eleanor's belongings and discovers the vial.",
+          "Dr. John Watson discovers Emily's diary among her personal belongings while examining her home.",
       },
       {
-        name: "Embezzlement Documents",
+        name: "A Strange Ingredient Bottle",
         detail:
-          "Miss Marple uncovers financial documents revealing Alexander's embezzlement scheme hidden in the Library.",
-        location: "The Library",
+          "A bottle containing a rare and deadly poison is found hidden inside a vase at Amelia Turner's luxury hotel.",
+        location: "Amelia Turner's Hotel – Reception Area",
         unlockingClue: null,
         unlockMeans:
-          "Miss Marple stumbles upon the documents while inspecting the bookshelves.",
+          "Detective Sherlock Holmes notices an odd-looking vase in the reception area, and upon closer inspection, finds the hidden bottle inside.",
       },
       {
-        name: "Hidden Compartment",
+        name: "Footprints",
         detail:
-          "In Alexander's briefcase, a hidden compartment is found containing incriminating evidence related to the murder.",
-        location: "Alexander Blackwood's Briefcase",
+          "Unusual footprints are discovered near the crime scene, leading towards Thomas Fletcher's house.",
+        location: "Crime Scene",
         unlockingClue: null,
         unlockMeans:
-          "Miss Marple notices a loose screw on the briefcase and discovers the hidden compartment.",
+          "Detective Sherlock Holmes discovers the footprints during the initial examination of the crime scene.",
       },
       {
-        name: "Anonymous Note",
+        name: "Garden Invitation",
         detail:
-          "Miss Marple receives an anonymous note warning her about Alexander's involvement in the murder.",
-        location: null,
-        suspect: "Anonymous Sender",
+          "A torn invitation to Eleanor Blackwood's garden party is found in Samuel Reynolds' pocket.",
+        location: "Samuel Reynolds' Cottage",
         unlockingClue: null,
-        unlockMeans: "The note is slipped under Miss Marple's hotel room door.",
+        unlockMeans:
+          "Detective Sherlock Holmes finds the torn invitation when searching Samuel Reynolds' cottage.",
+      },
+      {
+        name: "Poison Vial",
+        detail:
+          "A hidden compartment in Joshua Sinclair's desk contains a poison vial matching the one used to kill Emily.",
+        location: "Joshua Sinclair's Study",
+        unlockingClue: null,
+        unlockMeans:
+          "Detective Sherlock Holmes discovers the hidden compartment in Joshua Sinclair's desk during a thorough search.",
       },
     ],
   },
   redHerrings: {
     clueList: [
       {
-        name: "A torn invitation",
+        name: "A broken necklace",
         detail:
-          "A torn piece of an invitation is found in the victim's handbag.",
-        location: "Eleanor Sinclair's Handbag",
+          "A broken necklace is found in the garden of Eleanor Blackwood's estate.",
+        location: "Eleanor Blackwood's Garden",
         unlockingClue: null,
         unlockMeans:
-          "Miss Marple examines the contents of the victim's handbag and notices the torn invitation.",
-        event: "The Masquerade Invitation",
-        revealSuspects: ["Victoria Crane"],
+          "Detective Sherlock Holmes comes across the broken necklace while examining the garden.",
+        event: "A secretive transaction",
+        revealSuspects: ["Eleanor Blackwood"],
       },
       {
-        name: "A broken necklace clasp",
-        detail: "A broken clasp from a necklace is discovered in the Ballroom.",
-        location: "The Ballroom",
+        name: "An anonymous letter",
+        detail:
+          "An anonymous letter is discovered in Joshua Sinclair's mailbox.",
+        location: "Joshua Sinclair's Mansion",
         unlockingClue: null,
         unlockMeans:
-          "Miss Marple closely inspects the Ballroom area and finds the broken clasp.",
-        event: "The Stolen Necklace",
-        revealSuspects: ["Isabella Rivera"],
+          "Dr. John Watson finds the anonymous letter while checking Joshua Sinclair's mail.",
+        event: "A secret meeting",
+        revealSuspects: ["Joshua Sinclair"],
       },
       {
-        name: "A mysterious letter",
+        name: "A torn book page",
         detail:
-          "A crumpled letter is found in the victim's pocket with traces of blue ink.",
-        location: "Eleanor Sinclair's Pocket",
+          "A torn page from a book is found near Thomas Fletcher's house.",
+        location: "Near Thomas Fletcher's House",
         unlockingClue: null,
         unlockMeans:
-          "During the investigation, Miss Marple discovers the crumpled letter in the victim's pocket.",
-        event: "The Mysterious Phone Call",
-        revealSuspects: ["Nathaniel King"],
-      },
-      {
-        name: "A torn photograph",
-        detail:
-          "A torn photograph is discovered near the terrace, depicting Eleanor and another individual.",
-        location: "Near the Terrace",
-        unlockingClue: null,
-        unlockMeans:
-          "While examining the surroundings, Miss Marple notices the torn photograph on the floor near the terrace.",
-        event: "The Public Argument",
-        revealSuspects: ["Marcus Johnson"],
-      },
-      {
-        name: "An antique artifact",
-        detail:
-          "An antique artifact is found hidden inside a book in the Library.",
-        location: "The Library",
-        unlockingClue: null,
-        unlockMeans:
-          "Miss Marple investigates the shelves in the Library and discovers the hidden antique artifact.",
-        event: "The Suspicious Document",
-        revealSuspects: ["Victoria Crane"],
-      },
-      {
-        name: "A broken mask",
-        detail:
-          "A broken masquerade mask is found discarded in a trash can in the Garden.",
-        location: "The Garden",
-        unlockingClue: null,
-        unlockMeans:
-          "While exploring the Garden, Miss Marple notices the broken mask in the trash can.",
-        event: "The Mysterious Phone Call",
-        revealSuspects: ["Nathaniel King"],
+          "Detective Sherlock Holmes spots the torn book page while examining the surroundings near Thomas Fletcher's house.",
+        event: "An unexpected confrontation",
+        revealSuspects: ["Thomas Fletcher"],
       },
     ],
   },
   locations: {
     locationList: [
       {
+        location: "Joshua Sinclair's Mansion",
+        description:
+          "A grand mansion with opulent interiors and lavish decorations. The rooms are filled with antique furniture and ornate paintings, exuding an air of wealth and sophistication.",
+        neighboringLocations: ["The Study", "The Ballroom", "The Gardens"],
+        charactersPresent: ["Joshua Sinclair"],
+      },
+      {
         location: "The Study",
         description:
-          "The study is a dimly lit room with walls adorned with bookshelves filled with leather-bound tomes. A large mahogany desk sits in the center, covered in papers and writing utensils.",
-        neighboringLocations: ["The Hallway", "The Library"],
-        charactersPresent: ["Alexander Blackwood"],
+          "A room filled with bookshelves lining the walls, filled with rare and ancient volumes. A large oak desk sits in the center of the room, covered in papers and books.",
+        neighboringLocations: ["Joshua Sinclair's Mansion"],
+        charactersPresent: [],
       },
       {
         location: "The Ballroom",
         description:
-          "The ballroom is a grand, opulent space with high ceilings and sparkling chandeliers. The marble floors reflect the glow of the crystal lights, while couples dance to the melodious tunes of the live orchestra.",
-        neighboringLocations: ["The Hallway", "The Terrace"],
-        charactersPresent: ["Victoria Crane", "Isabella Rivera"],
-      },
-      {
-        location: "The Garden",
-        description:
-          "The garden is a serene and picturesque area with lush greenery and colorful flowers. Stone paths wind their way through the foliage, leading to hidden nooks and a quaint gazebo.",
-        neighboringLocations: ["The Terrace"],
-        charactersPresent: ["Nathaniel King"],
-      },
-      {
-        location: "The Terrace",
-        description:
-          "The terrace offers a breathtaking view of the mansion's sprawling grounds. Elegant hedges line the edges, and cozy seating arrangements invite guests to relax and savor the cool night air.",
-        neighboringLocations: ["The Ballroom", "The Garden"],
-        charactersPresent: ["Marcus Johnson"],
-      },
-      {
-        location: "The Library",
-        description:
-          "The library is a haven of knowledge, with floor-to-ceiling bookshelves and rolling ladders. Cozy armchairs and a crackling fireplace invite readers to lose themselves in the world of literature.",
-        neighboringLocations: ["The Study", "The Hallway"],
-        charactersPresent: ["Nathaniel King", "Victoria Crane"],
-      },
-      {
-        location: "The Hallway",
-        description:
-          "The hallway is the central passage connecting various rooms. It is adorned with intricate paintings and lined with statues on elegant pedestals.",
-        neighboringLocations: [
-          "The Kitchen",
-          "The Study",
-          "The Library",
-          "The Ballroom",
-        ],
-        charactersPresent: ["David O'Leary"],
-      },
-      {
-        location: "The Kitchen",
-        description:
-          "The kitchen is a bustling hub of culinary activity. Stainless steel appliances glisten under the bright, fluorescent lights, and the savory aroma of gourmet dishes fills the air.",
-        neighboringLocations: ["The Hallway"],
+          "A spacious ballroom adorned with intricate chandeliers and expansive mirrors. The sound of elegance and laughter fills the air as people dance and mingle.",
+        neighboringLocations: ["Joshua Sinclair's Mansion"],
         charactersPresent: [],
       },
       {
-        location: "The Secret Passage",
+        location: "The Gardens",
         description:
-          "The secret passage is a hidden pathway concealed behind a bookshelf in the library. It leads to a mysterious underground tunnel network, connecting various parts of the mansion.",
-        neighboringLocations: ["The Library"],
+          "Vibrant and meticulously maintained gardens, featuring a variety of colorful flowers and perfectly sculpted hedges. The sweet scent of blooms drifts through the air.",
+        neighboringLocations: ["Joshua Sinclair's Mansion"],
+        charactersPresent: [],
+      },
+      {
+        location: "Amelia Turner's Luxury Hotel - Reception Area",
+        description:
+          "A luxurious hotel reception area, adorned with marble floors and sparkling chandeliers. The sound of soft piano music creates an elegant ambiance.",
+        neighboringLocations: ["Amelia Turner's Office", "The Hotel Lounge"],
+        charactersPresent: ["Amelia Turner"],
+      },
+      {
+        location: "Amelia Turner's Office",
+        description:
+          "A sophisticated office space with floor to ceiling windows offering a panoramic view of Windermere. A large mahogany desk sits at the center, covered in meticulously organized paperwork.",
+        neighboringLocations: ["Amelia Turner's Luxury Hotel - Reception Area"],
+        charactersPresent: [],
+      },
+      {
+        location: "The Hotel Lounge",
+        description:
+          "A cozy lounge area with plush sofas and a crackling fireplace. Soft jazz music plays in the background, creating a relaxed and intimate atmosphere.",
+        neighboringLocations: ["Amelia Turner's Luxury Hotel - Reception Area"],
+        charactersPresent: [],
+      },
+      {
+        location: "Windermere Library",
+        description:
+          "A peaceful library with towering bookshelves, filled with a vast collection of books on various subjects. The scent of old pages lingers in the air.",
+        neighboringLocations: ["The Village Hall"],
+        charactersPresent: ["Thomas Fletcher"],
+      },
+      {
+        location: "The Village Hall",
+        description:
+          "A quaint gathering place adorned with vibrant paintings and historical artifacts. The walls are lined with notice boards showcasing upcoming events and community announcements.",
+        neighboringLocations: ["Windermere Library"],
+        charactersPresent: [],
+      },
+      {
+        location: "Eleanor Blackwood's Estate",
+        description:
+          "A picturesque estate nestled amidst lush green lawns and vibrant flower beds. The grand mansion stands as a testament to opulence and refined taste.",
+        neighboringLocations: ["The Gardens", "The Ballroom"],
+        charactersPresent: ["Eleanor Blackwood"],
+      },
+      {
+        location: "Samuel Reynolds' Cottage",
+        description:
+          "A humble cottage surrounded by wildflowers and towering trees. The rustic charm of the cottage blends harmoniously with the serene beauty of nature.",
+        neighboringLocations: ["Outskirts of Windermere"],
+        charactersPresent: ["Samuel Reynolds"],
+      },
+      {
+        location: "Outskirts of Windermere",
+        description:
+          "Tranquil outskirts of Windermere, offering breathtaking views of the picturesque landscapes. The serenity is broken only by the sound of rustling leaves and chirping birds.",
+        neighboringLocations: ["Samuel Reynolds' Cottage"],
+        charactersPresent: [],
+      },
+      {
+        location: "Crime Scene",
+        description:
+          "An isolated area near the picturesque Windermere lake, marked with police tape. The tranquility of the surroundings is shattered by the presence of investigators.",
+        neighboringLocations: ["The Village Hall"],
         charactersPresent: [],
       },
     ],
   },
   introduction: {
     introductionText: [
-      "The opulent mansion stood tall against the night sky, its grandeur illuminated by the flickering glow of candles and the sparkling chandeliers within. Elite members of society, dressed in elaborate masquerade masks and elegant gowns, filled the ballroom with an air of mystery and excitement. The occasion was a masquerade ball, where the wealthy and influential gathered to socialize and revel in the allure of anonymity.",
-      "Amongst the guests, a figure emerged, known to all as Miss Marple, the renowned detective with a keen eye for detail. Accompanied by her trusted sidekick, they entered the mansion, their presence greeted with curious glances and whispers. Clad in tweed skirts and hats, Miss Marple's elderly frame conveyed an air of wisdom and experience. She carried a knitting needle in one hand and a book in the other, ready to unravel the secrets hidden within the walls of the mansion.",
-      "The invitation for their investigation had arrived unexpectedly. The local police, aware of Miss Marple's unparalleled reputation in solving perplexing crimes, had called upon her services. However, this case held more significance for Miss Marple than mere professional duty. Eleanor Sinclair, the victim, was a close friend of hers. The news of her tragic demise had shaken Miss Marple to the core, driving her need to uncover the truth and seek justice for her fallen comrade.",
-      "As they made their way through the corridors, Miss Marple's sharp eyes took in the opulence surrounding her. Paintings adorned the walls, their subjects long-forgotten faces gazing down silently. The scent of perfume mingled with the lively melody from the ballroom, creating an atmosphere both enticing and oppressive. The detective approached the study, the room where the crime had occurred. Intrigued and determined, she prepared herself to delve into the sinister secrets lurking behind the opulent facade.",
+      "The tranquil village of Windermere, known for its serene lakes and picturesque landscapes, was abuzz with whispers and speculation. The news of a local's untimely demise under suspicious circumstances had sent shockwaves through the once peaceful community. As the villagers struggled to come to terms with the tragic event, secrets that had long been buried began to surface, threatening to unravel the fabric of their idyllic lives.",
+      "On this misty morning, a distinctive figure emerged from the fog, announcing the arrival of famed detective Sherlock Holmes. Tall and imposing, with his deerstalker hat perched atop his head and a magnifying glass in hand, Holmes exuded an aura of brilliance and eccentricity. Accompanying him was his trusted sidekick, Dr. John Watson, a loyal and methodical companion.",
+      "They had been summoned to Windermere to investigate the mysterious death of Emily Lancaster, a reserved and mysterious woman who had recently moved to the village. Emily's life had been abruptly cut short at a social event held in the village hall, her presence now a void that echoed in the hearts of the villagers.",
+      "But why had Holmes and Watson been called upon to solve this chilling puzzle? There were whispers of foul play, of a murder most treacherous, and the local authorities, recognizing the need for exceptional detective skills, had sought the renowned consulting detective's expertise.",
+      "Yet, beneath the surface, there was a personal reason for Holmes's involvement. Something about this enigmatic case tugged at his brilliant mind, as if the whispers carried in the wind held a resonance with his own past. With a sense of determination, Sherlock Holmes took a deep breath and prepared to step into Joshua Sinclair's mansion, where the crime had unfolded. The answers lay within, waiting to be unraveled.",
     ],
   },
 } as Partial<mysteryDataType>;

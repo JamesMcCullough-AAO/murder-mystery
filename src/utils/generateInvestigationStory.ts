@@ -92,6 +92,7 @@ export const generateInvestigationStory = async ({
     locations: {},
     suspects: {},
   };
+
   for (let i = 0; i < toGenerate.length; i++) {
     const toGenerateItem = toGenerate[i];
     switch (toGenerateItem.type) {

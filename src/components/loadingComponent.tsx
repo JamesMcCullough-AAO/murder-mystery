@@ -33,12 +33,11 @@ export const LoadingComponent = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((index) => (index + 1) % loadingLines.length);
+      setIndex((prev) => (prev + 1) % loadingLines.length);
       setCurrentLine(loadingLines[index]);
-    }, 3000);
-
+    }, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [index]);
 
   return (
     <HStack
@@ -46,12 +45,13 @@ export const LoadingComponent = () => {
       top="50%"
       left="50%"
       transform="translate(-50%, -50%)"
-      backgroundColor="blackAlpha.500"
+      backgroundColor="blackAlpha.800"
+      borderRadius="lg"
+      padding="1rem"
     >
       <Text fontSize="3xl" fontWeight="bold" color="white">
         {currentLine}
       </Text>
-      // hover animated
       <SearchIcon
         style={{
           animation: "hover 2s infinite",
